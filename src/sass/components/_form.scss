@@ -1,0 +1,100 @@
+.form {
+  position: relative;
+  background-color: white;
+
+  .header__form {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(sm) {
+      flex-direction: row;
+    }
+  }
+
+  .form__input {
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0px 10px 10px;
+
+    input {
+      width: 100%;
+      padding: 10px 0px 10px 0px;
+      background: transparent;
+      box-sizing: border-box;
+      color: $color-grey-dark;
+      outline: none;
+      border: none;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+    }
+
+    input:focus {
+      border: none;
+    }
+
+    input+label:after {
+      content: " ";
+    }
+
+    input:placeholder-shown+label {
+      color: $color-primary;
+      left: 14px;
+      bottom: -8px;
+    }
+
+    input:focus+label,
+    input+label {
+      position: absolute;
+      bottom: 12px;
+      left: 10px;
+      color: $color-primary;
+      line-height: 60px;
+      pointer-events: none;
+      transition: all 0.25s;
+      font-size: 12px;
+    }
+  }
+
+  .input-half {
+    width: 100%;
+
+    @include respond(sm) {
+      width: 50%;
+    }
+
+  }
+}
+
+@keyframes flyin {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}

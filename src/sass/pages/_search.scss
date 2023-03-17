@@ -1,0 +1,141 @@
+.consultant {
+  .consultant__info {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid $border-color;
+
+    @include respond(sm) {
+      padding: 2.5rem;
+      display: flex;
+    }
+
+    &--summary {
+      width: 100%;
+
+      @include respond(sm) {
+        width: 70%;
+        margin-right: 5rem;
+      }
+    }
+
+    &--details {
+      display: flex;
+      flex-direction: column;
+
+      @include respond(md) {
+        flex-direction: row;
+      }
+
+      .consultant__info--img {
+        height: 8.6rem;
+      }
+
+      .consultant__info--title {
+        font-size: 2.5rem;
+        color: $color-primary;
+        line-height: 2.8rem;
+        font-weight: 500;
+      }
+
+      .consultant__info--location {
+        font-size: 1.6rem;
+      }
+
+      .consultant__info--title,
+      .consultant__info--location,
+      .consultant__info--contact {
+        margin-bottom: 0.5rem;
+      }
+
+      .consultant__info--contact {
+        display: flex;
+        flex-direction: column;
+
+        @include respond(lg) {
+          flex-direction: row;
+        }
+      }
+
+      .consultant__info--icon {
+        height: 1em;
+        margin-right: 0.5rem;
+      }
+
+      .consultant__info--addressWrapper {
+        margin-left: 1rem;
+      }
+
+    }
+
+    &--contactPhone,
+    &--contactWebsite,
+    &--contactDirections {
+      color: $color-secondary;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &--buttonGroup {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      button {
+        margin-bottom: 1rem;
+        width: 20rem;
+
+      }
+    }
+  }
+}
+
+.read-more-btn {
+  color: $color-secondary;
+  display: block;
+  cursor: pointer;
+}
+
+.read-more-btnImg {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+.searchWrapper {
+  padding-top: 3rem;
+  margin-top: 3rem;
+
+  @include respond(sm) {
+    margin-top: 0;
+  }
+
+  .search__title {
+    font-size: 2.5rem;
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  .search__description {
+    margin-bottom: 3rem;
+    color: $color-grey-dark;
+  }
+
+  .search__clear {
+    color: $color-primary;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+
+    img {
+      background-color: $color-secondary;
+      padding: 0.25rem;
+    }
+  }
+}

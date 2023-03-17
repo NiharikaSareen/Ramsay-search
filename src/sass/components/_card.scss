@@ -1,0 +1,127 @@
+.otherDetails__title {
+  font-size: 2.5rem;
+  color: $color-primary;
+  font-weight: 500;
+}
+
+.otherDetails__card {
+  background-color: $color-secondary;
+  display: inline-block;
+  font-size: 1.6rem;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  *,
+  &:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
+  &--img {
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  &--caption {
+    top: 3rem;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+
+    &:before {
+      background-color: $color-white;
+      bottom: -5px;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 100%;
+      top: -5px;
+      z-index: -1;
+    }
+
+    h3 {
+      padding-left: 1rem;
+      color: $color-primary;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 0;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: 0.5;
+    }
+
+    figcaption:before {
+      right: -5px;
+    }
+
+    h3 {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+.otherDetails__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+
+  @include respond(sm) {
+    flex-direction: row;
+  }
+
+  .otherDetails__wrapperCard {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include respond(sm) {
+      width: 33.33%;
+      margin: 0.5rem;
+    }
+
+    @include respond(md) {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+
+    @include respond(lg) {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+  }
+}
+
+.read-more-btn {
+  font-size: 1.6rem;
+}
+
+.consultant__info--background {
+  display: none;
+
+  p {
+    font-size: 1.6rem;
+    color: $color-primary;
+  }
+}
+
+.read-more-text--show {
+  display: inline;
+}

@@ -1,0 +1,61 @@
+.header {
+  height: 30rem;
+  min-height: 30rem;
+  position: relative;
+
+  @include respond(md) {
+    height: 50rem;
+    min-height: 50rem;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.8s;
+    opacity: 0.5;
+    background-color: $color-grey-dark;
+  }
+
+  &__image {
+    min-height: inherit;
+  }
+
+  .header__text {
+    width: 85%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+
+    @include respond(sm) {
+      top: 50%;
+    }
+
+    @include respond(md) {
+      width: 80%;
+      top: 50%;
+    }
+
+    @include respond(lg) {
+      width: 50%;
+      top: 50%;
+    }
+  }
+
+  .header__title {
+    color: $color-white;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+  }
+}

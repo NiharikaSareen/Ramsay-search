@@ -1,0 +1,45 @@
+.responsive-image {
+  height: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond(sm) {
+    max-width: 540px;
+  }
+
+  @include respond(md) {
+    max-width: 720px;
+  }
+
+  @include respond(lg) {
+    max-width: 960px;
+  }
+
+  @include respond(xl) {
+    max-width: 1140px;
+  }
+
+  @include respond(xxl) {
+    max-width: 1320px;
+  }
+}
+
+.text-blue {
+  color: $color-secondary;
+}

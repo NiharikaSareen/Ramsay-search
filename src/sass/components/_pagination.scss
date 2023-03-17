@@ -1,0 +1,33 @@
+//pagination
+.page__navigation {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+
+  .results {
+    font-size: 1.6rem;
+    color: $color-primary;
+    margin-bottom: 1.6rem;
+  }
+
+  .page-link {
+    background-color: $color-secondary;
+    color: $color-white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  .pagination {
+    list-style: none;
+    display: flex;
+    margin-top: 1.6rem;
+
+
+  }
+}
